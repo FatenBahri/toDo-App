@@ -1,0 +1,61 @@
+/* Custom styles for the navigation bar */
+.navbar {
+    /* Fond blanc propre, remplace bg-light de Bootstrap */
+    background-color: #ffffff !important; 
+    /* Ligne de séparation subtile */
+    border-bottom: 1px solid #e3e6ea;
+    /* Ombre légère pour effet de "flottement" */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); 
+    padding: 10px 0; 
+    position: sticky; /* Pour garder la barre en haut si la page défile */
+    top: 0;
+    z-index: 100; /* Assure que la nav est au-dessus de tout le reste */
+}
+
+/* Ensure the inner container respects the app's overall max-width, if any */
+.container-fluid {
+    /* Largeur maximale pour aligner le contenu de la nav avec le formulaire/tâches */
+    max-width: 650px; 
+    padding: 0 20px; 
+    margin: 0 auto;
+    display: flex;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Espacement entre les liens */
+    margin-left: auto; /* Pousse les liens vers la droite */
+    padding-right: 25px;
+}
+/* Styling for the Brand Name (e.g., "To Do List") */
+.navbar-brand {
+    display: flex;
+    color: #2563eb !important; /* Use your primary app blue */
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: color 0.2s;
+    
+}
+
+.navbar-brand:hover {
+    color: #1e40af !important; /* Slightly darker blue on hover */
+}
+
+/* Styling for the Navigation Link (e.g., "Login") */
+.nav-link {
+    color: #6c757d !important; /* Muted grey for links */
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+    color: #2563eb !important; /* Blue text on hover */
+    background-color: #f0f4ff; /* Very light blue background on hover */
+}

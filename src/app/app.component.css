@@ -1,0 +1,28 @@
+/* Styling for the main body/application background */
+body {
+    background-color: #f8f9fa; /* Very light grey background for a clean look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #657d95; /* Dark text for good readability */
+}
+
+/* Styling for the content wrapper */
+.container {
+    max-width: 800px; /* Limits the content width for readability on large screens */
+    margin-top: 50px; /* Space from the top (below the eventual nav bar) */
+    padding: 0 15px;
+}
+
+/* --- Header Styles --- */
+.text-center h1 {
+    color: #007bff; /* Primary blue for the main title */
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+}
+
+.text-center h2 {
+    color: #6c757d; /* Muted grey for the subtitle */
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+}

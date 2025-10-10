@@ -1,0 +1,8 @@
+<div class="add-task-form">   
+    <input [(ngModel)] = "task"  placeholder="Add a new task"  >
+    <button (click)="addTask()">Add </button>
+    
+</div>
+<div class="postList">
+        <app-list-tasks [data]="tab"></app-list-tasks>
+</div>

@@ -1,0 +1,10 @@
+<div class="list-group">
+  <div class="task-card" *ngFor="let item of data; let i = index">
+    <span class="task-number">{{i + 1}}</span>
+    <span class="task-text">{{item}}</span>
+    <div class="task-actions">
+      <a (click)="deleteTask(item)" class="delete-btn">🗑️</a>
+      <a (click)="modifyTask(item)" class="modif-btn">✏️</a>
+    </div>
+  </div>
+</div>

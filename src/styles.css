@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+/* ====================================
+1. BASE & GLOBAL STYLES (Appliqué au body)
+==================================== */
+
+body {
+    font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+    background-color: #f4f6fb;
+    color: #343a40;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    transition: background 0.3s;
+}
+
+/* Texte TODO en arrière-plan, plus doux et responsive */
+body::before {
+    content: "TODO";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18vw;
+    font-weight: 900;
+    color: rgba(37, 99, 235, 0.035);
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    z-index: -1;
+    user-select: none;
+    white-space: nowrap;
+}
+
+
+
+/* Titres */
+h1, h2, h3 {
+    color: #2563eb;
+    font-weight: 800;
+    margin-bottom: 0.7em;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Liens */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover, a:focus {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+/* Scrollbar stylée */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #f4f6fb;
+}
+::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .container {
+        max-width: 98vw;
+        padding: 18px 4vw;
+        border-radius: 10px;
+        margin: 24px auto 0 auto;
+    }
+    body::before {
+        font-size: 28vw;
+    }
+}

@@ -1,0 +1,23 @@
+footer {
+    /* Positionnement pour rester en bas de la page */
+    position: fixed; /* Reste visible même lors du défilement */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    /* Design et typographie */
+    background-color: #ffffff; /* Fond blanc propre */
+    color: #6c757d; /* Texte gris doux */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.85rem;
+    
+    /* Bordure subtile au-dessus pour séparer du contenu */
+    border-top: 1px solid #e3e6ea;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03); /* Ombre légère vers le haut */
+    z-index: 10; /* Assure qu'il est au-dessus du filigrane */
+}
+
+footer p {
+    margin: 0; /* Supprime la marge par défaut des paragraphes */
+}
