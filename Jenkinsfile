@@ -14,7 +14,7 @@ pipeline{
                 sh 'node -v'
                 sh 'npm -v'
                 sh 'ng version'
-                sh 'npm install'
+                
            }
        }
         stage('Build'){
@@ -27,7 +27,8 @@ pipeline{
         stage('Test'){
             steps{
                 echo 'Testing..'
-                sh  "ng test" 
+                
+                sh  "ng test --watch=false --browsers=FirefoxHeadless" 
             }
         }
         stage('Deploy'){
