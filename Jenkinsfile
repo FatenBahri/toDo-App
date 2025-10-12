@@ -11,15 +11,15 @@ pipeline{
         }
         stage('Check Environment') {
             steps {
-                sh 'node -v'
-                sh 'npm -v'
-                sh 'ng version'
+                 node -v
+                npm -v
+                ng version
            }
        }
         stage('Build'){
             steps{
                 echo 'Building..cad le compilation de projet'
-                sh  "ng build --configuration production"
+                  ng build --configuration production
 
             }
         }
