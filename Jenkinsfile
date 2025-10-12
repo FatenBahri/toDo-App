@@ -28,7 +28,7 @@ pipeline{
             steps{
                 echo 'Testing..'
                 
-                sh  "ng test --watch=false --browsers=FirefoxHeadless" 
+                sh  "ng test --browsers=FirefoxHeadless" 
             }
         }
         stage('Deploy'){
