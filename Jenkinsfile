@@ -14,9 +14,27 @@ pipeline{
                 sh 'node -v'
                 sh 'npm -v'
                 sh 'ng version'
+                sh 'npm install'
            }
        }
-    }
+        stage('Build'){
+            steps{
+                echo 'Building..cad le compilation de projet'
+                sh  "ng build --configuration production"
+
+            }
+        }
+        stage('Test'){
+            steps{
+                echo 'Testing..'
+                sh  "ng test" 
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo 'Deploying....'
+            }
+        }}
         post{
             success{
                 echo 'Pipeline executed successfully!'
