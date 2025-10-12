@@ -11,22 +11,22 @@ pipeline{
         }
         stage('Check Environment') {
             steps {
-                bat 'node -v'
-                bat 'npm -v'
-                bat 'ng version'
+                sh 'node -v'
+                sh 'npm -v'
+                sh 'ng version'
            }
        }
         stage('Build'){
             steps{
                 echo 'Building..cad le compilation de projet'
-                bat  "ng build --configuration production"
+                sh  "ng build --configuration production"
 
             }
         }
         stage('Test'){
             steps{
                 echo 'Testing..'
-                bat  "ng test" 
+                sh  "ng test" 
             }
         }
         stage('Deploy'){
