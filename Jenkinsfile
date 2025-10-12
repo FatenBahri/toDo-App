@@ -33,9 +33,11 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                
+
                 echo 'Deploying....'
-            }
+                withCredentials([string(credentialsId: 'FIREBASE_TOKEN', variable: 'FIREBASE_TOKEN')])
+                    { sh 'firebase deploy --token $FIREBASE_TOKEN' }      
+       }
         }}
         post{
             success{
