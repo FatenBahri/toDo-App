@@ -13,7 +13,7 @@ footer {
     font-size: 0.85rem;
     
     /* Bordure subtile au-dessus pour séparer du contenu */
-    border-top: 1px solid #a6c0e3;
+    border-top: 1px solid #c4cdd9;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.03); /* Ombre légère vers le haut */
     z-index: 10; /* Assure qu'il est au-dessus du filigrane */
 }
