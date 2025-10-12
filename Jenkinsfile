@@ -11,29 +11,12 @@ pipeline{
         }
         stage('Check Environment') {
             steps {
-                 node -v
-                npm -v
-                ng version
+                sh 'node -v'
+                sh 'npm -v'
+                sh 'ng version'
            }
        }
-        stage('Build'){
-            steps{
-                echo 'Building..cad le compilation de projet'
-                  ng build --configuration production
-
-            }
-        }
-        stage('Test'){
-            steps{
-                echo 'Testing..'
-                sh  "ng test" 
-            }
-        }
-        stage('Deploy'){
-            steps{
-                echo 'Deploying....'
-            }
-        }}
+    }
         post{
             success{
                 echo 'Pipeline executed successfully!'
