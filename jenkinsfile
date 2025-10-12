@@ -6,20 +6,20 @@ pipeline{
         stage('Checkout'){
             steps{
                 echo 'Checking out.. cloner+checkout le depot github'
-                git branch:"*/master", url: 'https://github.com/FatenBahri/toDo-App.git'
+                git branch:"master", url: 'https://github.com/FatenBahri/toDo-App.git'
             }
         }
         stage('Build'){
             steps{
                 echo 'Building..cad le compilation de projet'
-                ng build --configuration production
+                sh "ng build --configuration production"
 
             }
         }
         stage('Test'){
             steps{
                 echo 'Testing..'
-                ng test 
+                sh "ng test" 
             }
         }
         stage('Deploy'){
