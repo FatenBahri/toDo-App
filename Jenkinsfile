@@ -14,7 +14,7 @@ pipeline{
                 sh 'node -v'
                 sh 'npm -v'
                 sh 'ng version'
-                sh 'firebase --version'
+                sh 'npx firebase --version'
                 
            }
        }
