@@ -14,7 +14,7 @@ pipeline{
                 sh 'node -v'
                 sh 'npm -v'
                 sh 'ng version'
-                sh 'npm install -g firebase-tools'
+                sh 'sudo npm install -g firebase-tools'
                 
            }
        }
