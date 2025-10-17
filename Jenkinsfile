@@ -37,7 +37,7 @@ pipeline{
                 echo 'Deploying....'
                 withCredentials([string(credentialsId: 'FIREBASE_TOKEN', variable: 'FIREBASE_TOKEN')])
                     {   sh '''cd dist/toDo-App  &&
-                        firebase deploy --token $FIREBASE_TOKEN''' }      
+                        npx firebase deploy --token $FIREBASE_TOKEN''' }      
        }
         }}
         post{
